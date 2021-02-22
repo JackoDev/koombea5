@@ -1,5 +1,4 @@
 <div class="nested-fields">
-    <%= form_with model: @social, local: true do |f| %>
     <%= f.hidden_field :_destroy %>
     <div>
         <%= f.label :name %>
@@ -11,6 +10,4 @@
     </div>
     <div>
         <%= link_to "Remove", '#', class: "remove_fields" %>
-    </div>
-    <% end %>
 </div>

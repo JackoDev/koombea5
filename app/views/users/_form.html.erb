@@ -37,15 +37,16 @@
     <%= f.text_area :bio %>
   </div>
 
-    <fieldset>
-        <legend>Socials:</legend>
-        <%= f.fields_for :socials do |socials_form| %>
-            <%= render "social_fields", form: socials_form %>
-        <% end %>
-        <%= link_to_add_fields "Add Socials", f, :socials %>
-    </fieldset>
+  <fieldset>
+    <legend>Socials:</legend>
+    <%= f.fields_for :socials do |socials_form| %>
+        <%= render "social_fields", f: socials_form %>
+    <% end %>
+    <%= link_to_add_fields "Add Socials", f, :socials %>
+  </fieldset>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+

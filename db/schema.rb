@@ -12,14 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2021_02_21_171722) do
 
-  create_table "social_networks", force: :cascade do |t|
-    t.string "name"
-    t.string "link"
-    t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "socials", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "name"

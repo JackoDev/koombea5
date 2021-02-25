@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_one_attached :profile_image, :dependent => :destroy
     has_many :socials, inverse_of: :user
     accepts_nested_attributes_for :socials, allow_destroy: true, reject_if: :all_blank
     validates :username, presence: true,

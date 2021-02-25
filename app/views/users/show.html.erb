@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<div>
+  <strong>Image Profile:</strong><br>
+  <% if @user.profile_image.attached? %>
+    <%= image_tag @user.profile_image %>
+  <% else %>
+     <strong>Profile Image not available.</strong>
+  <% end %>
+
+</div>
+
 <p>
   <strong>Username:</strong>
   <%= @user.username %>

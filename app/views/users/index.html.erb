@@ -4,7 +4,7 @@
 
 <table>
   <thead>
-    <tr>
+      <th>Thumbnail</th>
       <th>Username</th>
       <th>Email</th>
       <th>First Name</th>
@@ -17,6 +17,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= user.profile_image %></td>
         <td><%= user.username %></td>
         <td><%= user.email %></td>
         <td><%= user.first_name %></td>

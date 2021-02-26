@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Avatar</th>
       <th>Username</th>
       <th>Email</th>
       <th>First Name</th>
@@ -17,6 +18,13 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td>
+            <% if user.profile_img %>
+              <%= image_tag user.thumbnail %>
+            <% else %>
+              <b>No Image</b>
+            <% end %>
+        </td>
         <td><%= user.username %></td>
         <td><%= user.email %></td>
         <td><%= user.first_name %></td>

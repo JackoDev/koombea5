@@ -13,7 +13,14 @@ class User < ApplicationRecord
 
     def thumbnail
         if user_image.attached?
-            user_image.variant(combine_options: { resize: '600x600', gravity: 'center' })
+            user_image.variant(resize: '100x100')
         end
     end
+
+    def profile_img
+        if user_image.attached?
+            user_image.variant(resize: '400x400')
+        end
+    end
+
 end

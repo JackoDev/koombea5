@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Profile Image:</strong>
-  <%= image_tag @user.thumbnail %>
+  <strong>Profile Image:</strong><br>
+  <% if @user.profile_img %>
+    <%= image_tag @user.profile_img %>
+  <% else %>
+    <strong>Profile Image not attached yet.</strong>
+  <% end %>
 </p>
 
 <p>

@@ -33,5 +33,19 @@
   <%= @user.bio %>
 </p>
 
+
+<p>
+  <strong>Socials:</strong><br>
+  <% @user.socials.each do |social| %>
+    <p>
+      <strong>Social Name:</strong>
+        <%= social.name %>
+      <strong>Link:</strong>
+        <%= social.link %>
+    </p>
+  <% end %>
+</p>
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

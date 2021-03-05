@@ -6,7 +6,9 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.current_user.id
+    @users = User.where(
+      'users.id = ?', current_user.id
+    )
   end
 
   # GET /users/1 or /users/1.json

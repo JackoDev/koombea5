@@ -4,6 +4,6 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, User, user_id: user.id
+    can :manage, User, id: user.id
   end
 end
